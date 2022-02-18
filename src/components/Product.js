@@ -27,7 +27,7 @@ export default function Product(props) {
                         -
                     </button>
                     <button type="button" class="btn btn-warning">
-                        ${props.product.quantity}
+                        {props.product.quantity}
                     </button>
                     <button
                         type="button"
@@ -41,16 +41,16 @@ export default function Product(props) {
                 </div>
             </div>
             <div className="col-2">
-                {props.product.quantity * props.product.price}
+                ${props.product.quantity * props.product.price}
             </div>
-            <button
+           {/*} <button
                 className="col-2 btn btn-danger"
                 onClick={() => {
                     props.removeItem(props.index);
                 }}
             >
                 Remove
-            </button>
+            </button>*/}
         </div>
     );
 }
