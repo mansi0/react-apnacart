@@ -3,38 +3,38 @@
 /* eslint-disable no-undef */
 import React from "react";
 
-class Navbar extends React.Component  {
+class Navbar extends React.Component {
 
   constructor(props) {
     super(props)
 
     this.state = {
-      text : ''
-      }
+      text: ''
+    }
   }
 
   addToCart() {
-    this.setState ({
-      text : "Added to Cart"
+    this.setState({
+      text: "Added to Cart"
     })
   }
-  
+
   render() {
     return (
       <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Apna Cart
-          </a>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-black text-white">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#">
+              Apna Cart
+            </a>
             <div color="blue"> {this.state.text}</div>
-          {//<p class="text-start" bgcolor ="blue">Start aligned text on all viewport sizes.</p>
-          }
-          <button type="button" className="btn btn-primary btn-lg" onClick = {() => this.addToCart()}>Add To Cart</button>
-        </div>
-      </nav>
+            {//<p class="text-start" bgcolor ="blue">Start aligned text on all viewport sizes.</p>
+            }
+            <button type="button" className="btn btn-primary btn-lg" onClick={() => this.addToCart()}>Add To Cart</button>
+          </div>
+        </nav>
       </>
-	    );
+    );
   }
 }
 
