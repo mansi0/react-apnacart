@@ -5,6 +5,7 @@ import ProductList from './components/ProductList';
 import Footer from './components/Footer';
 import React, { useState } from 'react';
 import AddItem from './components/addItem';
+import LifecycleA from './components/LifecycleA';
 
 function App() {
     const [productList, setProductList] = useState([
@@ -76,6 +77,7 @@ function App() {
         <>
             <Navbar />
             <main className='container mt-5'>
+            <LifecycleA/>
                 <AddItem addItem={addItem} />
                 <ProductList productList={productList} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity} removeItem={removeItem} />
             </main>
